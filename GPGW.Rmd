@@ -1,0 +1,71 @@
+---
+title: "Graphs"
+output: html_document
+date: "2024-12-04"
+---
+
+```{r setup, include=FALSE}
+ggplot(data, aes(x = Year, y = `Government Spending`, color = Country, group = Country)) +
+  geom_line(size = 1) +                   # Add lines
+  geom_point(size = 2) +                  # Add points
+  labs(
+    title = "Change in Government Spending Over Time",
+    x = "Year",
+    y = "Government Spending",
+    color = "Country"
+  ) +
+  theme_minimal()
+
+ggplot(data, aes(x = Year, y = `Government Spending`, color = Country, group = Country)) +
+  geom_line(size = 1) +                   # Add lines
+  geom_point(size = 2) +                  # Add points
+  labs(
+    title = "Figure 1: Change in Government Spending Over Time",
+    x = "Year",
+    y = "Government Spending",
+    color = "Country"
+  ) +
+  theme_minimal()
+
+ggplot(data, aes(x = Year, y = `Business Freedom`, color = Country, group = Country)) +
+  geom_line(size = 1) +                   # Add lines
+  geom_point(size = 2) +                  # Add points
+  labs(
+    title = "Figure 2: Change in Business Freedom Over Time",
+    x = "Year",
+    y = "Business Freedom",
+    color = "Country"
+  ) +
+  theme_minimal()
+
+ggplot(data, aes(x = Year, y = `Investment Freedom`, color = Country, group = Country)) +
+  geom_line(size = 1) +                   # Add lines
+  geom_point(size = 2) +                  # Add points
+  labs(
+    title = "Figure 3: Change in Investment Freedom Over Time",
+    x = "Year",
+    y = "Investment Freedom",
+    color = "Country"
+  ) +
+  theme_minimal()
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
